@@ -7,6 +7,7 @@ RUN apk add --no-cache git gcc gettext musl-dev libffi-dev libxml2-dev libxslt-d
 RUN git clone https://github.com/taigaio/taiga-back.git .
 
 RUN pip install -r requirements.txt
+RUN pip install taiga-contrib-ldap-auth-ext
 RUN python manage.py compilemessages
 
 RUN apk del git gcc gettext
