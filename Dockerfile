@@ -8,7 +8,7 @@ RUN git clone https://github.com/taigaio/taiga-back.git .
 
 RUN pip install -r requirements.txt
 
-RUN apk del git gcc postgresql-dev
+RUN apk del git gcc
 
 RUN addgroup --gid 1999 -S taiga && adduser -u 1999 -S taiga -G taiga
 RUN chown -R taiga:taiga /app
