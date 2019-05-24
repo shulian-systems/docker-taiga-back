@@ -10,7 +10,7 @@ RUN pip install -r requirements.txt
 
 RUN apk del git gcc postgresql-dev
 
-RUN addgroup --gid 199 -S taiga && adduser -u 199 -S taiga -G taiga
+RUN addgroup --gid 1999 -S taiga && adduser -u 1999 -S taiga -G taiga
 RUN chown -R taiga:taiga /app
 USER taiga
 
